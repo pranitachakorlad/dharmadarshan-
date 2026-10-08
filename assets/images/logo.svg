@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <circle cx="32" cy="32" r="30" stroke="#c9a227" stroke-width="2" fill="#1a120c"/>
+  <circle cx="32" cy="32" r="22" stroke="#8b6914" stroke-width="1" fill="none" opacity="0.6"/>
+  <path d="M32 12 L36 28 L52 28 L40 38 L44 54 L32 44 L20 54 L24 38 L12 28 L28 28 Z" fill="#c9a227" opacity="0.9"/>
+  <circle cx="32" cy="32" r="4" fill="#e8c547"/>
+  <text x="32" y="58" text-anchor="middle" fill="#c9a227" font-family="serif" font-size="6">P</text>
+</svg>

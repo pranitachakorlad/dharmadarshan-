@@ -1,0 +1,1 @@
+<?php require __DIR__ . '/auth.php'; requireAdmin(true); require __DIR__ . '/layout.php'; require __DIR__ . '/../includes/razorpay.php'; adminHeader('Darshan Kundli bookings'); ?><div class="admin-panel"><?php renderKundliHistory(kundliHistory(getDB(),null),true); ?></div><?php adminFooter(); ?>

@@ -1,0 +1,51 @@
+DHARMA DARSHAN — HOSTINGER UPLOAD
+
+FILES
+1. dharmadarshan-website.zip — website files and uploaded images.
+2. dharmadarshan-hostinger.sql — your exported database, including current records.
+
+ON YOUR CURRENT HOSTINGER UPLOAD SCREEN
+Upload both files, then click Create website and review the next screen.
+
+IF YOU USE MANUAL SETUP
+Create a Custom PHP/HTML website. Upload the ZIP using File Manager and extract it
+inside public_html. index.php must be directly inside public_html.
+Create a MySQL database and user in Hostinger. Open that database in phpMyAdmin,
+choose Import, and import dharmadarshan-hostinger.sql into the empty database.
+Keep the SQL backup outside public_html; do not expose the backup on the website.
+
+DATABASE SETTINGS — REQUIRED AFTER UPLOAD
+Open public_html/config/database.php in Hostinger File Manager.
+Replace these placeholders using the exact database credentials from Hostinger:
+DB_NAME: HOSTINGER_DATABASE_NAME
+DB_USER: HOSTINGER_DATABASE_USERNAME
+DB_PASS: HOSTINGER_DATABASE_PASSWORD
+DB_HOST is localhost; change it only if Hostinger supplies a different host.
+SITE_URL is https://dharmadarshan.in; adjust if testing on a temporary domain.
+Enter credentials directly in Hostinger; you do not need to share them in chat.
+
+PHP AND STORAGE
+Select PHP 8.2 or newer supported by your plan.
+Enable pdo_mysql, fileinfo and mbstring if they are not already enabled.
+Use 5 MB or more for upload_max_filesize and a larger post_max_size, such as 8 MB.
+Ensure assets/uploads and storage/sessions are writable by PHP.
+
+ADMIN LOGIN
+Username: Lalitmahajan
+Password: the admin password you set previously.
+
+VERIFY BEFORE CONNECTING THE DOMAIN
+Check the homepage and all nine categories; uploaded images should appear.
+Check admin login, product/blog management, customer registration/login,
+Cash on Delivery checkout, and order history in My Account and admin Orders.
+Razorpay supports Rs.99 Kundli bookings and product Buy Now checkout. See
+RAZORPAY-SETUP.txt to configure and test both before going live.
+Orders are saved as Pending confirmation.
+After verification, connect dharmadarshan.in using Hostinger's DNS instructions
+and ensure HTTPS is enabled. Do not import the SQL again after live orders start.
+
+CONTENTS
+The ZIP excludes local sessions, setup.php, repository files and seed SQL.
+database/orders.sql stays in the ZIP because the app reads it at runtime.
+Database and session folders are blocked from direct web access.
+The original local project and supplied SQL backup were not modified.

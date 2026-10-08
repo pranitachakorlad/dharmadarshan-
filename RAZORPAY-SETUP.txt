@@ -1,0 +1,40 @@
+RAZORPAY FOR THE RS.99 DARSHAN KUNDLI BOOKING
+
+1. Create a Razorpay account at https://dashboard.razorpay.com/signup.
+2. Complete business onboarding/KYC and activation requested by Razorpay.
+3. In Test Mode, generate API keys from Account & Settings > API Keys.
+4. In Hostinger File Manager, open public_html/config/razorpay.php.
+   Replace the empty fallback strings for RAZORPAY_KEY_ID and
+   RAZORPAY_KEY_SECRET with the matching test keys. Keep the secret private.
+   For example: define('RAZORPAY_KEY_ID', getenv('RAZORPAY_KEY_ID') ?: 'YOUR_KEY_ID');
+   Set KEY_SECRET the same way with your own secret; do not put it in JavaScript.
+5. In Razorpay, configure automatic payment capture.
+6. Add a webhook to https://dharmadarshan.in/razorpay-webhook.php.
+   Subscribe to payment.captured and order.paid. Choose a webhook secret and
+   put that same secret in RAZORPAY_WEBHOOK_SECRET in config/razorpay.php.
+   Use the actual HTTPS test domain if testing before connecting your domain.
+7. On Hostinger, ensure the PHP curl extension is enabled with pdo_mysql,
+   fileinfo and mbstring, and HTTPS is active.
+8. Sign in as a customer and open Darshan Kundli > Book Now.
+   Verify test payment, cancellation and failed payment behavior. Check
+   My Account > Darshan Kundli bookings and Admin > Kundli bookings.
+   Test mode is visibly labelled and does not collect real money.
+9. Once the account is activated and testing passes, switch to matching LIVE
+   API keys and configure the webhook and capture settings in LIVE mode too.
+   Remove test credentials from production configuration.
+
+The booking price is fixed server-side at 9900 paise (Rs.99), regardless of
+the amount in the page URL. Only captured payments matching the saved order,
+amount and currency mark a booking paid. Webhooks recover confirmations when
+the customer closes the browser. Keys are blank in the supplied ZIP, so live
+payments remain unavailable until your Razorpay account is configured.
+
+Both Rs.99 Darshan Kundli Book Now and product Buy Now checkout support
+Razorpay. Product checkout also offers Cash on Delivery. The same API keys and
+webhook are used for both. Kundli Book Now opens checkout directly for signed-in
+customers when keys are configured, with WhatsApp alongside. Product checkout
+collects delivery details before opening Razorpay.
+
+No real or Razorpay sandbox payment was made while preparing this integration,
+because account keys were not available. Logic and database checks used local
+test records that were rolled back.

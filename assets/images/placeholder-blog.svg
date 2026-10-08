@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <rect width="800" height="450" fill="#1a120c"/>
+  <rect x="40" y="40" width="720" height="370" rx="8" stroke="#3d2e1f" stroke-width="2"/>
+  <circle cx="400" cy="200" r="60" stroke="#c9a227" stroke-width="2" fill="none" opacity="0.4"/>
+  <polygon points="380,170 420,170 400,140" fill="#c9a227" opacity="0.6"/>
+  <rect x="360" y="180" width="80" height="50" rx="4" fill="#c9a227" opacity="0.3"/>
+  <text x="400" y="320" text-anchor="middle" fill="#b8a898" font-family="sans-serif" font-size="18">Demo Blog Image</text>
+</svg>
