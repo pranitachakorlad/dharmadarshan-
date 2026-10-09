@@ -18,7 +18,7 @@ $wishTotal = $isAdmin ? 0 : wishlistCount();
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@400;500;600;700;800&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?= $headerBase ?>assets/css/style.css">
+    <link rel="stylesheet" href="<?= $headerBase ?>assets/css/style.css?v=20261009-mobile-menu">
 </head>
 <body>
 <div class="site-video-bg" aria-hidden="true">

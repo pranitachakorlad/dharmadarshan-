@@ -2803,3 +2803,12 @@ main,
 .order-items-table table { width: 100%; min-width: 420px; }
 .order-history-card details { margin-top: 12px; }
 .order-history-card summary { cursor: pointer; }
+
+/* Mobile navigation stays in the header flow instead of covering the hero. */
+@media (max-width: 768px) {
+  .site-header { position: relative; top: auto; }
+  .header-inner .main-nav { position: static; grid-column: 1 / -1; width: 100%; top: auto; left: auto; right: auto; margin-top: 6px; max-height: 65vh; overflow-y: auto; }
+  .header-inner .main-nav:not(.is-open) { display: none; }
+  .header-inner .main-nav.is-open { display: block; }
+}
+
